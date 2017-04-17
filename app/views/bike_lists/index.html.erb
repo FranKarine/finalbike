@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bike Lists</h1>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+body {
+    background:	#F5F5DC;
+     background-size: 100%;
+}
+
+
+
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bike_lists.each do |bike_list| %>
+      <tr>
+        <td><%= bike_list.name %></td>
+        <td><%= bike_list.type %></td>
+        <td><%= bike_list.price %></td>
+        <td><%= bike_list.image_url %></td>
+        <td><%= link_to 'Show', bike_list %></td>
+        <td><%= link_to 'Edit', edit_bike_list_path(bike_list) %></td>
+        <td><%= link_to 'Destroy', bike_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bike list', new_bike_list_path %>

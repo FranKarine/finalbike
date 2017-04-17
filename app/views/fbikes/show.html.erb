@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fbike.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fbike.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fbike.price %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @fbike.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_fbike_path(@fbike) %> |
+<%= link_to 'Back', fbikes_path %>

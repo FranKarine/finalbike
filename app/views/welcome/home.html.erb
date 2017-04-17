@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+body {
+    background:	#F5F5DC;
+     background-size: 100%;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="w3-content w3-section"  background-size: 30%}>
+    
+    <img class="mySlides" src="http://d5qsyj6vaeh11.cloudfront.net/images/whats%20available/cycling/backgrounds/w2303_h_bg.jpg" style="width:100%">
+    <img class="mySlides" src="https://photos.smugmug.com/Everything/i-Cw6NqWV/0/L/Mezmerizing%20Glendalough%20Original-L.jpg" style="width:100%">
+    <img class="mySlides" src="https://hotelsireland.com/blog/wp-content/uploads/2014/10/Slea-Head-Kerry.jpg" style="width:100%">
+    <img class="mySlides" src="http://i0.wp.com/www.sara-sees.com/wp-content/uploads/2015/11/howth6.png" style="width:100%">
+    <img class="mySlides" src="http://d5qsyj6vaeh11.cloudfront.net/images/destinations/c103_c_ries_cliffsofmoher_obriens_tower_bg_resized.jpg" style="width:100%">
+    <img class="mySlides" src="https://s3-eu-west-1.amazonaws.com/omnibuilder/51292d0a-af93-4d04-bd35-bd4a6a98f21f/4af0d714-78a0-472b-b67b-25a38d8bb5e4.jpg " style="width:100%">
+
+   
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+</body>
+</html>

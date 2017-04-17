@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">     
+
+<style>
+
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+body {
+    background:	#F5F5DC;
+     background-size: 100%;
+}
+
+
+</style>
+<div class=""container"">
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <h1><b>Welcome to Rent a Bike in Dublin</b></h1>
+</head>
+<body>
+  <ul>
+   <li><%=link_to"Home",welcome_home_path%></li>
+ <li> <%=link_to"About",welcome_about_path%></li>
+  <li><%=link_to"Rent",fbikes_path%></li>
+ <li> <%=link_to"Routes",welcome_routes_path%></li>
+  <li> <%=link_to"Contact Us",welcome_contactus_path%></li>
+  <li><%= link_to 'Register',new_user_registration_path %> </li>
+<li><%= link_to 'Sign in', new_user_session_path %></li>
+  
+</ul>
+
+<%= yield %>
+<% if user_signed_in? %>
+<div>Signed in as... <%= current_user.email %>
+(<%= link_to 'Sign out', destroy_user_session_path,
+:method => :delete%>)
+</div>
+<% else %>
+  <ul>
+
+
+</ul>
+
+</div>
+<% end %>
+
+
+</div>
+</body>
+</html>

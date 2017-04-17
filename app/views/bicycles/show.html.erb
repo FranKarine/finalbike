@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bicycle.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bicycle.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bicycle.price %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @bicycle.image_url %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @bicycle.category %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @bicycle.brand %>
+</p>
+
+<%= link_to 'Edit', edit_bicycle_path(@bicycle) %> |
+<%= link_to 'Back', bicycles_path %>
